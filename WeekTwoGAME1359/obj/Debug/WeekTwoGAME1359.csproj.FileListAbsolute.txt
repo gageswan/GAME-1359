@@ -1,0 +1,7 @@
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\bin\Debug\WeekTwoGAME1359.exe.config
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\bin\Debug\WeekTwoGAME1359.exe
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\bin\Debug\WeekTwoGAME1359.pdb
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\obj\Debug\WeekTwoGAME1359.csproj.AssemblyReference.cache
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\obj\Debug\WeekTwoGAME1359.csproj.CoreCompileInputs.cache
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\obj\Debug\WeekTwoGAME1359.exe
+C:\Users\Mo\Documents\GitHub\GAME-1359\WeekTwoGAME1359\obj\Debug\WeekTwoGAME1359.pdb
