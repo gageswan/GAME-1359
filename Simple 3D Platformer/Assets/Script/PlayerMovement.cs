@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour {
         RaycastHit hit;
 
         if (h > 0) {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * Time.deltaTime; 
         }
         if (h < 0) {
             transform.position += Vector3.left * speed * Time.deltaTime;
