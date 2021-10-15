@@ -7,6 +7,8 @@ public class PlatformGameManager : MonoBehaviour
 {
     public int tokenCollection = 0;
     public int playerAmmo = 30;
+    public int playerMaxHealth = 10;
+    public int playerHealth = 10;
 
    /* public static PlatformGameManager instance;
 
@@ -23,9 +25,13 @@ public class PlatformGameManager : MonoBehaviour
     }*/
 
     private void Update() {
-        if (tokenCollection == 5) {
-            SceneManager.LoadScene(1);
-        }        
+        if (tokenCollection == 3) {
+            SceneManager.LoadScene(2);
+        }
+
+        if (playerHealth == 0) {
+            SceneManager.LoadScene(2);
+        }
     }
 }
 

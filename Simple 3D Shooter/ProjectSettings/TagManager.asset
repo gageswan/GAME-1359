@@ -7,6 +7,8 @@ TagManager:
   - Surface
   - Token
   - Hazard
+  - Bullets
+  - KillZone
   layers:
   - Default
   - TransparentFX
