@@ -9,3 +9,4 @@
 8. Dramatic Zoom - When the player (or an enemy, your choice) dies, smoothly zoom the camera in closer, before returning it to its original position.
 -triggered camera movement when player dies, but need to change where the camera is pointing rather than it's position
 
+
