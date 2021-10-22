@@ -1,0 +1,11 @@
+9. Environment Damage - Add a particle effect for when the player shoots the wall or other objects.
+-created a prefab to be instantiated at the rat hit point that destroys itself after a delay
+4. Dust Trail - Add a dust trail that appears behind the player when they walk.
+-reused code that creates environment particle for footsteps.
+6. Heartbeat - Add a looping heartbeat sound that plays while the player is low on health
+-added new clip, changed playerhealth script to switch audio clips and set to loop.
+1. Camera Shake - When the player takes damage, the camera should shake.
+-when the TakeDamage function is called, changed the transform of the camera
+8. Dramatic Zoom - When the player (or an enemy, your choice) dies, smoothly zoom the camera in closer, before returning it to its original position.
+-triggered camera movement when player dies, but need to change where the camera is pointing rather than it's position
+
