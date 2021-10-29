@@ -10,3 +10,4 @@
 -triggered camera movement when player dies, but need to change where the camera is pointing rather than it's position
 
 
+https://github.com/gageswan/GAME-1359/tree/master/SurvivalShooter
