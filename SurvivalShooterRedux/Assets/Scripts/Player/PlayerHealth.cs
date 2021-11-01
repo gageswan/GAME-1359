@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     AudioSource playerAudio;
     PlayerMovement playerMovement;
     PlayerShooting playerShooting;
+    public GameOverManager gameOverManager;
     bool isDead;
     bool damaged;
 
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
         playerMovement = GetComponent <PlayerMovement> ();
+        //gameOverManager = GetComponent <GameOverManager> ();
         playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
@@ -60,6 +62,7 @@ public class PlayerHealth : MonoBehaviour
         if(currentHealth <= 0 && !isDead)
         {
             Death ();
+            gameOverManager.playersDead++;
         }
     }
 
@@ -82,6 +85,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void RestartLevel ()
     {
-        SceneManager.LoadScene (0);
+        //SceneManager.LoadScene (0);
     }
 }

@@ -17,8 +17,8 @@ public class EnemyAttack : MonoBehaviour
 
     void Awake ()
     {
-        player = GameObject.FindGameObjectWithTag ("Player");
-        playerHealth = player.GetComponent <PlayerHealth> ();
+        //player = GameObject.FindGameObjectWithTag ("Player");
+        //playerHealth = player.GetComponent <PlayerHealth> ();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
     }
@@ -26,18 +26,20 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.gameObject == player)
+        if(other.gameObject.CompareTag("Player")) //== player)
         {
             playerInRange = true;
+            playerHealth = other.gameObject.GetComponentInChildren<PlayerHealth>();
         }
     }
 
 
     void OnTriggerExit (Collider other)
     {
-        if(other.gameObject == player)
+        if(other.gameObject.CompareTag("Player"))
         {
             playerInRange = false;
+            playerHealth = null;
         }
     }
 
@@ -51,10 +53,10 @@ public class EnemyAttack : MonoBehaviour
             Attack ();
         }
 
-        if(playerHealth.currentHealth <= 0)
+/*        if(playerHealth.currentHealth <= 0)
         {
             anim.SetTrigger ("PlayerDead");
-        }
+        }*/
     }
 
 

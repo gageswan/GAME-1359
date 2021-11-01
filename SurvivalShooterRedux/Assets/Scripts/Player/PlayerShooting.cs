@@ -6,6 +6,7 @@ public class PlayerShooting : MonoBehaviour
     public float timeBetweenBullets = 0.15f;
     public float range = 100f;
 
+    int playerIndex;
 
     float timer;
     Ray shootRay = new Ray();
@@ -25,19 +26,30 @@ public class PlayerShooting : MonoBehaviour
         gunLine = GetComponent <LineRenderer> ();
         gunAudio = GetComponent<AudioSource> ();
         gunLight = GetComponent<Light> ();
+
+
+        PlayerMovement c = GetComponentInParent<PlayerMovement>();
+        if (c != null){
+            playerIndex = c.playerIndex;
+        }
     }
 
 
-    void Update ()
-    {
+    void Update() {
         timer += Time.deltaTime;
-
-		if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
-        {
-            Shoot ();
+        if (playerIndex == 1) {
+            if (Input.GetButton("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0) {
+                Shoot();
+            } 
         }
 
-        if(timer >= timeBetweenBullets * effectsDisplayTime)
+        if (playerIndex == 2) {
+            if (Input.GetButton("Fire2") && timer >= timeBetweenBullets && Time.timeScale != 0) {
+                Shoot();
+            }
+        }
+
+        if (timer >= timeBetweenBullets * effectsDisplayTime)
         {
             DisableEffects ();
         }

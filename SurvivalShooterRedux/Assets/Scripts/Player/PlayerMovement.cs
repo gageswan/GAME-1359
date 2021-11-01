@@ -3,8 +3,7 @@
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 6f;
 
-	[SerializeField]
-	int playerIndex = 1;
+	public int playerIndex = 1;
 
 	private Vector3 movement;
 	private Animator anim;
@@ -38,16 +37,20 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Turning()
-	{
-		Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit floorHit;
+	{	if (playerIndex == 1) {
+			Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+			RaycastHit floorHit;
 
-		if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
-			Vector3 playerToMouse = floorHit.point - transform.position;
-			playerToMouse.y = 0f;
+			if (Physics.Raycast(camRay, out floorHit, camRayLength, floorMask)) {
+				Vector3 playerToMouse = floorHit.point - transform.position;
+				playerToMouse.y = 0f;
 
-			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-			playerRigidbody.MoveRotation(newRotation);
+				Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+				playerRigidbody.MoveRotation(newRotation);
+			}
+		}
+		else {
+			transform.Rotate(0, Input.GetAxis("Rotational") * 0.5f * speed, 0);
 		}
 	}
 
